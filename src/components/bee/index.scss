@@ -1,0 +1,25 @@
+.bee{
+  background:#eff33c;
+  width: 150px;
+  height:75px;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  background:linear-gradient(
+    to right,
+    #191919 25px,
+    #eff33c 25px 35px,
+    #191919 35px 60px,
+    #eff33c 60px 75px,
+    #191919 75px 95px,
+    #eff33c 95px 100%,
+  );
+
+  &::before{
+    background:#fff;
+    width: 50%;
+    height: 100%;
+  }
+}

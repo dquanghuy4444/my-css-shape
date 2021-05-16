@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&display=swap');
+
+*,
+*::after,
+*::before{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html, body{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto Slab', serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+span{
+  font-size:16px;
+  line-height: 2px;
+  font-weight:500;
+  color: #474242;
+}
+
+.react-codemirror2{
+  height: 100%;
+
+  .CodeMirror{
+    height:100%;
+  }
+}
+
+
+.app{
+  position: relative;
+
+  > .menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 18%;
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    overflow: auto;
+    padding: 1vh 1vw;
+    // display: none;
+
+    > ul {
+      list-style: none;
+      width: 100%;
+      height: auto;
+
+      li{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        padding: 16px 8px;
+        margin: 4px 0;
+
+        &:hover{
+          cursor: pointer;
+          background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);    
+          
+          span{
+            color:whitesmoke;
+          }
+        }
+      }
+    }
+
+    @media (width: 768px){
+      position: fixed;
+      width: 35%;
+      z-index: 11;
+      border-top-right-radius: 16px;
+    }
+
+    @media (max-width: 767px){
+      position: fixed;
+      width: 45%;
+      z-index: 11;
+      border-top-right-radius: 16px;
+
+    }
+  }
+
+  > .draw-area{
+    position: absolute;
+    top: 0;
+    left: 18%;
+    height: 100vh;
+    width: 82%;
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);    
+    padding: 8px;
+
+    .shape{
+      width: 100%;
+      height: 50%;
+      background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);    
+      display: flex;
+      align-items: center;
+      justify-content:center;
+    }
+
+    .code{
+      width: 100%;
+      height: 50%;
+      display: flex;
+      gap:8px;
+
+      .html{
+        flex:1;
+        overflow: auto;
+
+      }
+
+      .style{
+        flex:1;
+        overflow: auto;
+      }
+    }
+
+    @media (max-width: 768px){
+      padding: 0;
+      left: 0;
+      width: 100%;
+      overflow: auto;
+
+      .shape{
+        height: 35%;
+      }
+
+      .code{
+        flex-direction: column;
+        height: 65%;
+        gap:4px;
+      }
+    }
+  }
+}
