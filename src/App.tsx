@@ -7,7 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import {UnControlled as CodeMirror} from 'react-codemirror2'
-import { pages } from "./pages";
+import { pages as pagesTemp } from "./pages";
 import isMobile from './is-mobile';
 import { useState } from 'react';
 
@@ -23,6 +23,10 @@ function App() {
   const isMobileDevice:boolean = isMobile();
 
   const [listPagesIsDisplayed , setListPagesIsDisplayed] = useState<boolean>(isMobileDevice ? false : true);
+
+  const pages = pagesTemp.sort(function(a,b){
+    return a.text.localeCompare(b.text);
+  })
  
   return (
     <Router>
