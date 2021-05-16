@@ -1,4 +1,5 @@
 import './app.scss';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,18 +8,40 @@ import {
 } from "react-router-dom";
 import {UnControlled as CodeMirror} from 'react-codemirror2'
 import { pages } from "./pages";
+import isMobile from './is-mobile';
+import { useState } from 'react';
 
 require('codemirror/lib/codemirror.css');
-require('codemirror/theme/material.css');
+require('codemirror/theme/rubyblue.css');
 require('codemirror/theme/darcula.css');
-require('codemirror/mode/xml/xml.js');
+require("codemirror/mode/css/css");
 require('codemirror/mode/javascript/javascript.js');
+require('./darcula.scss');
+require('./theme.scss');
 
 function App() {
+  const isMobileDevice:boolean = isMobile();
+
+  const [listPagesIsDisplayed , setListPagesIsDisplayed] = useState<boolean>(isMobileDevice ? false : true);
+ 
   return (
-    <div className="app">
-      <Router>
-        <section className="menu">
+    <Router>
+      <div className="app">
+        {
+          (!listPagesIsDisplayed && isMobileDevice) && (
+            <div className="btn-open" onClick={ () => setListPagesIsDisplayed(prev => !prev)} >
+              <i></i>
+            </div>
+          )
+        }
+        <section className={"menu " + (listPagesIsDisplayed ? "" : "opacity-0")}>
+          {
+            isMobileDevice && (
+              <div className="btn-close" onClick={ () => setListPagesIsDisplayed(prev => !prev) }>
+                <span>&times;</span>
+              </div>
+            )
+          }
           <ul>
             {
               pages.map(page =>(
@@ -78,7 +101,7 @@ function App() {
                       autoCursor={ true }
                       value={ page.style }
                       options={{
-                        mode: 'javascript',
+                        mode: 'css',
                         theme: 'darcula',
                         lineNumbers: true
                       }}
@@ -91,9 +114,8 @@ function App() {
             </div>
           </div>
         </section>
-      </Router>
-
-    </div>
+      </div>
+    </Router>
   );
 }
 

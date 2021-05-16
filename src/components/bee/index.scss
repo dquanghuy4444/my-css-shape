@@ -1,4 +1,5 @@
 .bee{
+  position: relative;
   background:#eff33c;
   width: 150px;
   height:75px;
@@ -17,9 +18,39 @@
     #eff33c 95px 100%,
   );
 
-  &::before{
+  &::before,
+  &::after{
+    content:"";
+    position:absolute;
+  }
+
+  &:before{
     background:#fff;
     width: 50%;
     height: 100%;
+    border-radius:50% 50% 0 50%  ;
+    -webkit-border-radius:50% 50% 0 50%  ;
+    -moz-border-radius:50% 50% 0 50%  ;
+    -ms-border-radius:50% 50% 0 50%  ;
+    -o-border-radius:50% 50% 0 50%  ;
+    transform:translateY(-100%)  ;
+    -webkit-transform:translateY(-100%)  ;
+    -moz-transform:translateY(-100%)  ;
+    -ms-transform:translateY(-100%)  ;
+    -o-transform:translateY(-100%)  ;
+    -webkit-box-reflect: right;
+  }
+
+  &:after{
+    background:#191919;
+    width: 16px;
+    height: 16px;
+    border-radius:50%  ;
+    -webkit-border-radius:50%  ;
+    -moz-border-radius:50%  ;
+    -ms-border-radius:50%  ;
+    -o-border-radius:50%  ;
+    top: 20%;
+    right: 20px;
   }
 }

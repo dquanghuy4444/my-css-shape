@@ -25,6 +25,14 @@ span{
   color: #474242;
 }
 
+.d-none{
+  display: none;
+}
+
+.opacity-0{
+  opacity: 0 !important;
+}
+
 .react-codemirror2{
   height: 100%;
 
@@ -36,6 +44,34 @@ span{
 
 .app{
   position: relative;
+  display: flex;
+
+  > .btn-open{
+    z-index: 12;
+    position: fixed;
+    top: 3%;
+    left:0;
+    height: 40px;
+    width: 32px;
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;  
+    display: flex;
+
+    > i {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 4px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      margin: auto;
+
+    }
+  }
 
   > .menu{
     position: absolute;
@@ -45,8 +81,24 @@ span{
     width: 18%;
     background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
     overflow: auto;
+    opacity: 1;
     padding: 1vh 1vw;
-    // display: none;
+    transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    
+    >.btn-close{
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      cursor: pointer;
+
+      > span{
+        font-size: 28px;
+      }
+    }
 
     > ul {
       list-style: none;
@@ -76,14 +128,15 @@ span{
       width: 35%;
       z-index: 11;
       border-top-right-radius: 16px;
+      padding-top: 24px;
     }
 
     @media (max-width: 767px){
       position: fixed;
       width: 45%;
       z-index: 11;
-      border-top-right-radius: 16px;
-
+      border-top-right-radius: 20px;
+      padding-top: 24px;
     }
   }
 
