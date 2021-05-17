@@ -32,6 +32,7 @@ function App() {
       pages:pagesTemp.filter(item => item.group === GROUP_PAGE.FEATURE).sort(function(a,b){
         return a.text.localeCompare(b.text);
       }),
+      value:GROUP_PAGE.FEATURE
     },
     {
       text: 'Shapes',
@@ -39,6 +40,8 @@ function App() {
       pages:pagesTemp.filter(item => item.group === GROUP_PAGE.SHAPE).sort(function(a,b){
         return a.text.localeCompare(b.text);
       }),
+      value:GROUP_PAGE.SHAPE
+
     }
   ]
 
@@ -64,18 +67,25 @@ function App() {
               </div>
             )
           }
-          <ul>
-            {
-              pages.map(page =>(
-                <Link to={ page.to }>
-                  <li>
-                    <span>{ page.text }</span>      
-                  </li>
-                </Link>
+          {
+            sample.map(item => (
+              <>
+                <div className="group">{ item.text }</div>
+                <ul>
+                  {
+                    item.pages.map(page =>(
+                      <Link to={ item.to + page.to }>
+                        <li>
+                          <span>{ page.text }</span>      
+                        </li>
+                      </Link>
 
-              ))
-            }
-          </ul>
+                    ))
+                  }
+                </ul>
+              </>
+            ))
+          }
         </section>
 
         <section className="draw-area">
@@ -83,7 +93,7 @@ function App() {
           <Switch>
               {
                 pages.map(page =>(
-                  <Route path={ page.to } exact>
+                  <Route path={ sample.find(item => item.value === page.group)?.to + page.to } exact>
                     {
                       page.comp
                     }
@@ -97,7 +107,7 @@ function App() {
             <div className="html">
               {
                 pages.map(page =>(
-                  <Route path={ page.to } exact>
+                  <Route path={ sample.find(item => item.value === page.group)?.to + page.to } exact>
                     <CodeMirror
                       autoScroll={ true }
                       autoCursor={ true }
@@ -117,7 +127,7 @@ function App() {
             <div className="style">
               {
                 pages.map(page =>(
-                  <Route path={ page.to } exact>
+                  <Route path={ sample.find(item => item.value === page.group)?.to + page.to } exact>
                     <CodeMirror
                       autoScroll={ true }
                       autoCursor={ true }

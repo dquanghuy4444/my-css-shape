@@ -12,6 +12,7 @@ html, body{
   width: 100vw;
   height: 100vh;
   font-family: 'Roboto Slab', serif;
+  background-color: #ecf0f1;
 }
 
 a{
@@ -20,7 +21,7 @@ a{
 
 span{
   font-size:16px;
-  line-height: 2px;
+  // line-height: 2px;
   font-weight:500;
   color: #474242;
 }
@@ -46,6 +47,9 @@ span{
 .app{
   position: relative;
   display: flex;
+  max-width: 1536px;
+  width: 100%;
+  margin: 0 auto;
 
   > .btn-open{
     z-index: 12;
@@ -89,6 +93,12 @@ span{
     -moz-transition: opacity .3s ease-in-out;
     -ms-transition: opacity .3s ease-in-out;
     -o-transition: opacity .3s ease-in-out;
+
+    .group{
+      font-size:20px;
+      font-weight: bolder;
+      color:#df6262;
+    }
     
     >.btn-close{
       position: absolute;
@@ -101,16 +111,17 @@ span{
       }
     }
 
-    > ul {
+    ul {
       list-style: none;
       width: 100%;
       height: auto;
 
       li{
+        min-width: 100%;
         display: flex;
         align-items: center;
         width: fit-content;
-        padding: 16px 8px;
+        padding: 12px 8px;
         margin: 4px 0;
 
         &:hover{
