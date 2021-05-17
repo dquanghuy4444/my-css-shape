@@ -1,13 +1,15 @@
-import BphoneIconComp , { html as htmlBphoneIcon, style as styleBphoneIcon }  from "./components/bphone-icon";
-import BeeComp , { html as htmlBee, style as styleBee }  from "./components/bee";
-import HippoComp , { html as htmlHippo, style as styleHippo }  from "./components/hippo";
-import TriangleComp , { html as htmlTriangle, style as styleTriangle }  from "./components/triangle";
-import ArrowComp , { html as htmlArrow, style as styleArrow }  from "./components/arrow";
-import TrapezoidComp , { html as htmlTrapezoid, style as styleTrapezoid }  from "./components/trapezoid";
-import ParallelogramComp , { html as htmlParallelogram, style as styleParallelogram } from "./components/parallelogram";
-import HeartComp , { html as htmlHeart, style as styleHeart } from "./components/heart";
-import FlexMultiRowComp , { html as htmlFlexMultiRow, style as styleFlexMultiRow } from "./components/flex-multi-row";
-import LayoutCardResponsiveComp , { html as htmlLayoutCardResponsive, style as styleLayoutCardResponsives } from "./components/layout-card-responsive";
+import BphoneIconComp , { html as htmlBphoneIcon, style as styleBphoneIcon }  from "./components/shapes/bphone-icon";
+import BeeComp , { html as htmlBee, style as styleBee }  from "./components/shapes/bee";
+import HippoComp , { html as htmlHippo, style as styleHippo }  from "./components/shapes/hippo";
+import TriangleComp , { html as htmlTriangle, style as styleTriangle }  from "./components/shapes/triangle";
+import ArrowComp , { html as htmlArrow, style as styleArrow }  from "./components/shapes/arrow";
+import TrapezoidComp , { html as htmlTrapezoid, style as styleTrapezoid }  from "./components/shapes/trapezoid";
+import ParallelogramComp , { html as htmlParallelogram, style as styleParallelogram } from "./components/shapes/parallelogram";
+import HeartComp , { html as htmlHeart, style as styleHeart } from "./components/shapes/heart";
+import PaperWithTapedEdgesComp , { html as htmlPaperWithTapedEdges, style as stylePaperWithTapedEdges } from "./components/shapes/paper-with-taped-edges";
+
+import FlexMultiRowComp , { html as htmlFlexMultiRow, style as styleFlexMultiRow } from "./components/features/flex-multi-row";
+import LayoutCardResponsiveComp , { html as htmlLayoutCardResponsive, style as styleLayoutCardResponsives } from "./components/features/layout-card-responsive";
 
 
 enum GROUP_PAGE{
@@ -79,6 +81,14 @@ const pages = [
         comp: HeartComp,
         html:htmlHeart,
         style:styleHeart,
+        group:GROUP_PAGE.SHAPE,
+    },
+    {
+        to:"/paper-with-taped-edges",
+        text:"Paper With Taped Edges",
+        comp: PaperWithTapedEdgesComp,
+        html:htmlPaperWithTapedEdges,
+        style:stylePaperWithTapedEdges,
         group:GROUP_PAGE.SHAPE,
     },
     {
