@@ -1,0 +1,21 @@
+.list {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 15px 0;
+  background: #FFC107;
+}
+
+.item {
+  background: #FF5722;
+  // hàm calc tính 100 % / 3 để chia item thành 3 cột (33%), -10px tức là item sẽ trống 10px => 3 * 10px = 30px
+  width: calc((100% / 3) - 10px);
+  height: 100px;
+  margin-bottom: 15px;
+  
+  // nth-child(3n) là những item vị trí là bội của 3, :not là những item khác điều kiện
+  &:not(:nth-child(3n)) {
+    // 1 row trống 30px, khoảng cách giữa sẽ là (item trên 1 row - 1) / 2. Vì thằng cuối cùng không có margin.
+    margin-right: 15px;
+  }
+}

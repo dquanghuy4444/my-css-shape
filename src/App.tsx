@@ -7,7 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import {UnControlled as CodeMirror} from 'react-codemirror2'
-import { pages as pagesTemp } from "./pages";
+import { pages as pagesTemp , GROUP_PAGE } from "./pages";
 import isMobile from './is-mobile';
 import { useState } from 'react';
 
@@ -23,6 +23,24 @@ function App() {
   const isMobileDevice:boolean = isMobile();
 
   const [listPagesIsDisplayed , setListPagesIsDisplayed] = useState<boolean>(isMobileDevice ? false : true);
+
+
+  const sample = [
+    {
+      text: 'Features',
+      to:"/features",
+      pages:pagesTemp.filter(item => item.group === GROUP_PAGE.FEATURE).sort(function(a,b){
+        return a.text.localeCompare(b.text);
+      }),
+    },
+    {
+      text: 'Shapes',
+      to:"/shapes",
+      pages:pagesTemp.filter(item => item.group === GROUP_PAGE.SHAPE).sort(function(a,b){
+        return a.text.localeCompare(b.text);
+      }),
+    }
+  ]
 
   const pages = pagesTemp.sort(function(a,b){
     return a.text.localeCompare(b.text);

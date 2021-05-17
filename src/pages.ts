@@ -6,7 +6,14 @@ import ArrowComp , { html as htmlArrow, style as styleArrow }  from "./component
 import TrapezoidComp , { html as htmlTrapezoid, style as styleTrapezoid }  from "./components/trapezoid";
 import ParallelogramComp , { html as htmlParallelogram, style as styleParallelogram } from "./components/parallelogram";
 import HeartComp , { html as htmlHeart, style as styleHeart } from "./components/heart";
+import FlexMultiRowComp , { html as htmlFlexMultiRow, style as styleFlexMultiRow } from "./components/flex-multi-row";
+import LayoutCardResponsiveComp , { html as htmlLayoutCardResponsive, style as styleLayoutCardResponsives } from "./components/layout-card-responsive";
 
+
+enum GROUP_PAGE{
+    SHAPE=1,
+    FEATURE=2,
+}
 
 const pages = [
     {
@@ -15,6 +22,7 @@ const pages = [
         comp: BeeComp,
         html:htmlBee,
         style:styleBee,
+        group:GROUP_PAGE.SHAPE,
     },
     {
         to:"/bphone-icon",
@@ -22,6 +30,8 @@ const pages = [
         comp: BphoneIconComp,
         html:htmlBphoneIcon,
         style:styleBphoneIcon,
+        group:GROUP_PAGE.SHAPE,
+
     },
     {
         to:"/hippo",
@@ -29,6 +39,7 @@ const pages = [
         comp: HippoComp,
         html:htmlHippo,
         style:styleHippo,
+        group:GROUP_PAGE.SHAPE,
     },
     {
         to:"/triangle",
@@ -36,6 +47,7 @@ const pages = [
         comp: TriangleComp,
         html:htmlTriangle,
         style:styleTriangle,
+        group:GROUP_PAGE.SHAPE,
     },
     {
         to:"/arrow",
@@ -43,6 +55,7 @@ const pages = [
         comp: ArrowComp,
         html:htmlArrow,
         style:styleArrow,
+        group:GROUP_PAGE.SHAPE,
     },
     {
         to:"/trapezoid",
@@ -50,6 +63,7 @@ const pages = [
         comp: TrapezoidComp,
         html:htmlTrapezoid,
         style:styleTrapezoid,
+        group:GROUP_PAGE.SHAPE,
     },
     {
         to:"/parallelogram",
@@ -57,6 +71,7 @@ const pages = [
         comp: ParallelogramComp,
         html:htmlParallelogram,
         style:styleParallelogram,
+        group:GROUP_PAGE.SHAPE,
     },
     {
         to:"/heart",
@@ -64,7 +79,24 @@ const pages = [
         comp: HeartComp,
         html:htmlHeart,
         style:styleHeart,
+        group:GROUP_PAGE.SHAPE,
+    },
+    {
+        to:"/flex-multi-row",
+        text:"Flex Multi Row",
+        comp: FlexMultiRowComp,
+        html:htmlFlexMultiRow,
+        style:styleFlexMultiRow,
+        group:GROUP_PAGE.FEATURE,
+    },
+    {
+        to:"/layout-card-responsive",
+        text:"Layout Card Responsive ",
+        comp: LayoutCardResponsiveComp,
+        html:htmlLayoutCardResponsive,
+        style:styleLayoutCardResponsives,
+        group:GROUP_PAGE.FEATURE,
     },
 ]
 
-export { pages };
+export { pages , GROUP_PAGE };
