@@ -33,6 +33,7 @@ span{
   opacity: 0 !important;
 }
 
+
 .react-codemirror2{
   height: 100%;
 
@@ -153,9 +154,17 @@ span{
       width: 100%;
       height: 50%;
       background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);    
-      display: flex;
-      align-items: center;
-      justify-content:center;
+      // display: flex;
+      // align-items: center;
+      // justify-content:center;
+      display: grid;
+      place-items: center;
+      overflow: auto;
+
+      .shape-container{
+        display: flex;
+        gap:4px;
+      }
     }
 
     .code{
