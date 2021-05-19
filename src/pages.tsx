@@ -6,9 +6,11 @@ import ArrowComp , { html as htmlArrow, style as styleArrow }  from "./component
 import TrapezoidComp , { html as htmlTrapezoid, style as styleTrapezoid }  from "./components/shapes/trapezoid";
 import ParallelogramComp , { html as htmlParallelogram, style as styleParallelogram } from "./components/shapes/parallelogram";
 import HeartComp , { html as htmlHeart, style as styleHeart } from "./components/shapes/heart";
+import CanvasComp , { html as htmlCanvas, style as styleCanvas } from "./components/shapes/canvas";
 import PaperWithTapedEdgesComp , { html as htmlPaperWithTapedEdges, style as stylePaperWithTapedEdges } from "./components/shapes/paper-with-taped-edges";
 
 import FlexMultiRowComp , { html as htmlFlexMultiRow, style as styleFlexMultiRow } from "./components/features/flex-multi-row";
+import CallPhoneGlassComp , { html as htmlCallPhoneGlass, style as styleCallPhoneGlass } from "./components/features/call-phone-glass";
 import LayoutCardResponsiveComp , { html as htmlLayoutCardResponsive, style as styleLayoutCardResponsives } from "./components/features/layout-card-responsive";
 
 
@@ -33,7 +35,14 @@ const pages = [
         html:htmlBphoneIcon,
         style:styleBphoneIcon,
         group:GROUP_PAGE.SHAPE,
-
+    },
+    {
+        to:"/canvas",
+        text:"Canvas",
+        comp: <CanvasComp></CanvasComp>,
+        html:htmlCanvas,
+        style:styleCanvas,
+        group:GROUP_PAGE.SHAPE,
     },
     {
         to:"/hippo",
@@ -105,6 +114,14 @@ const pages = [
         comp: LayoutCardResponsiveComp,
         html:htmlLayoutCardResponsive,
         style:styleLayoutCardResponsives,
+        group:GROUP_PAGE.FEATURE,
+    },
+    {
+        to:"/call-phone-glass",
+        text:"Call Phone Glass ",
+        comp: CallPhoneGlassComp,
+        html:htmlCallPhoneGlass,
+        style:styleCallPhoneGlass,
         group:GROUP_PAGE.FEATURE,
     },
 ]
