@@ -41,7 +41,14 @@ function App() {
         return a.text.localeCompare(b.text);
       }),
       value:GROUP_PAGE.SHAPE
-
+    },
+    {
+      text: 'Tips',
+      to:"/tips",
+      pages:pagesTemp.filter(item => item.group === GROUP_PAGE.TIP).sort(function(a,b){
+        return a.text.localeCompare(b.text);
+      }),
+      value:GROUP_PAGE.TIP
     }
   ]
 

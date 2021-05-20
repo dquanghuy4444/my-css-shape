@@ -9,14 +9,17 @@ import HeartComp , { html as htmlHeart, style as styleHeart } from "./components
 import CanvasComp , { html as htmlCanvas, style as styleCanvas } from "./components/shapes/canvas";
 import PaperWithTapedEdgesComp , { html as htmlPaperWithTapedEdges, style as stylePaperWithTapedEdges } from "./components/shapes/paper-with-taped-edges";
 
-import FlexMultiRowComp , { html as htmlFlexMultiRow, style as styleFlexMultiRow } from "./components/features/flex-multi-row";
 import CallPhoneGlassComp , { html as htmlCallPhoneGlass, style as styleCallPhoneGlass } from "./components/features/call-phone-glass";
 import LayoutCardResponsiveComp , { html as htmlLayoutCardResponsive, style as styleLayoutCardResponsives } from "./components/features/layout-card-responsive";
+import ZoomHoverComp , { html as htmlZoomHover, style as styleZoomHover } from "./components/features/zoom-hover";
+
+import FlexMultiRowComp , { html as htmlFlexMultiRow, style as styleFlexMultiRow } from "./components/tips/flex-multi-row";
 
 
 enum GROUP_PAGE{
     SHAPE=1,
     FEATURE=2,
+    TIP=3,
 }
 
 const pages = [
@@ -106,7 +109,7 @@ const pages = [
         comp: FlexMultiRowComp,
         html:htmlFlexMultiRow,
         style:styleFlexMultiRow,
-        group:GROUP_PAGE.FEATURE,
+        group:GROUP_PAGE.TIP,
     },
     {
         to:"/layout-card-responsive",
@@ -122,6 +125,14 @@ const pages = [
         comp: CallPhoneGlassComp,
         html:htmlCallPhoneGlass,
         style:styleCallPhoneGlass,
+        group:GROUP_PAGE.FEATURE,
+    },
+    {
+        to:"/zoom-hover",
+        text:"Zoom Hover ",
+        comp: ZoomHoverComp,
+        html:htmlZoomHover,
+        style:styleZoomHover,
         group:GROUP_PAGE.FEATURE,
     },
 ]
