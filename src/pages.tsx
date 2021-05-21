@@ -9,12 +9,13 @@ import HeartComp , { html as htmlHeart, style as styleHeart } from "./components
 import CanvasComp , { html as htmlCanvas, style as styleCanvas } from "./components/shapes/canvas";
 import PaperWithTapedEdgesComp , { html as htmlPaperWithTapedEdges, style as stylePaperWithTapedEdges } from "./components/shapes/paper-with-taped-edges";
 
-import CallPhoneGlassComp , { html as htmlCallPhoneGlass, style as styleCallPhoneGlass } from "./components/features/call-phone-glass";
 import LayoutCardResponsiveComp , { html as htmlLayoutCardResponsive, style as styleLayoutCardResponsives } from "./components/features/layout-card-responsive";
 import ZoomHoverComp , { html as htmlZoomHover, style as styleZoomHover } from "./components/features/zoom-hover";
+import TextResponsiveFollowImageSizeComp , { html as htmlTextResponsiveFollowImageSize, style as styleTextResponsiveFollowImageSize } from "./components/features/text-responsive-follow-image-size";
 
 import FlexMultiRowComp , { html as htmlFlexMultiRow, style as styleFlexMultiRow } from "./components/tips/flex-multi-row";
-
+import LineClampingComp , { html as htmlLineClamping, style as styleLineClamping } from "./components/tips/line-clamping";
+import TextOverflowComp , { html as htmlTextOverflow, style as styleTextOverflow } from "./components/tips/text-overflow";
 
 enum GROUP_PAGE{
     SHAPE=1,
@@ -112,6 +113,22 @@ const pages = [
         group:GROUP_PAGE.TIP,
     },
     {
+        to:"/line-clamping",
+        text:"Line Clamping",
+        comp: LineClampingComp,
+        html:htmlLineClamping,
+        style:styleLineClamping,
+        group:GROUP_PAGE.TIP,
+    },
+    {
+        to:"/text-overflow",
+        text:"Text Overflow",
+        comp: TextOverflowComp,
+        html:htmlTextOverflow,
+        style:styleTextOverflow,
+        group:GROUP_PAGE.TIP,
+    },
+    {
         to:"/layout-card-responsive",
         text:"Layout Card Responsive ",
         comp: LayoutCardResponsiveComp,
@@ -120,19 +137,19 @@ const pages = [
         group:GROUP_PAGE.FEATURE,
     },
     {
-        to:"/call-phone-glass",
-        text:"Call Phone Glass ",
-        comp: CallPhoneGlassComp,
-        html:htmlCallPhoneGlass,
-        style:styleCallPhoneGlass,
-        group:GROUP_PAGE.FEATURE,
-    },
-    {
         to:"/zoom-hover",
         text:"Zoom Hover ",
         comp: ZoomHoverComp,
         html:htmlZoomHover,
         style:styleZoomHover,
+        group:GROUP_PAGE.FEATURE,
+    },
+    {
+        to:"/text-responsive-follow-image-size",
+        text:"Text Responsive Follow Image Size",
+        comp: TextResponsiveFollowImageSizeComp,
+        html:htmlTextResponsiveFollowImageSize,
+        style:styleTextResponsiveFollowImageSize,
         group:GROUP_PAGE.FEATURE,
     },
 ]

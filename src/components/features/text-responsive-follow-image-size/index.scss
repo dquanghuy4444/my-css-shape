@@ -1,0 +1,24 @@
+.box {
+  display: inline-block;
+  border:1px solid red;
+  margin:5px;
+  text-align:center;
+
+  h2 {
+    width: 0;
+    min-width: 100%;
+  }
+}
+
+.f {
+  float:left;
+}
+
+.t {
+  display:table;
+  margin:auto;
+}
+
+p {
+  clear:both;
+}
