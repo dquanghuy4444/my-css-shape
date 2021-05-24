@@ -1,3 +1,5 @@
+const to = `layout-card-responsive`;
+
 const html = 
 `
 <div className="card">
@@ -95,4 +97,4 @@ img {
 }
 `;
 
-export { html, style };
+export { html, style , to };

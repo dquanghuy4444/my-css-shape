@@ -1,3 +1,5 @@
+const to = `text-overflow`;
+
 const html = 
 `
 <p className="overflow">This is an example text showing nothing interesting but the truncated content via text-overflow shorthand property.</p>
@@ -51,4 +53,4 @@ const style =
 
 `;
 
-export { html, style };
+export { html, style , to };

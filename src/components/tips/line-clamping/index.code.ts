@@ -1,3 +1,5 @@
+const to = `line-clamping`;
+
 const html = 
 `
 <div className="module line-clamp">
@@ -24,4 +26,4 @@ const style =
 }
 `;
 
-export { html, style };
+export { html, style , to };

@@ -1,3 +1,5 @@
+const to = `flex-multi-row`;
+
 const html = 
 `<div className="hippo">
   <div className="ear"></div>
@@ -137,4 +139,4 @@ const style =
 }
 `;
 
-export { html, style };
+export { html, style , to };

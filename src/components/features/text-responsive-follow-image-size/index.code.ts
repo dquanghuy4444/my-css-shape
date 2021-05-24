@@ -1,3 +1,5 @@
+const to = `text-responsive-follow-image-size`;
+
 const html = 
 `
 <div>
@@ -89,4 +91,4 @@ p {
 }
 `;
 
-export { html, style };
+export { html, style , to };

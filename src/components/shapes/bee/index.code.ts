@@ -1,3 +1,5 @@
+const to = `bee`;
+
 const html = 
 `<div className="bee"></div>`;
 
@@ -60,4 +62,4 @@ const style =
 }
 `;
 
-export { html, style };
+export { html, style , to };

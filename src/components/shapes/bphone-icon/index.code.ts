@@ -1,3 +1,5 @@
+const to = `bphone-icon`;
+
 const html = 
 `<div className="bphone-logo">
     <div className="body-bottom"></div>
@@ -183,4 +185,4 @@ $logo-color: #fff;
 }
 `;
 
-export { html, style };
+export { html, style , to };

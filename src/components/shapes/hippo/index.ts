@@ -1,5 +1,4 @@
-import { html , style } from './index.code';
+import { html , style , to } from './index.code';
 import IndexComp from './index.component';
 
-export default IndexComp ;
-export { html , style };
+export { html , style , to , IndexComp as comp };

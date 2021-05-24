@@ -1,3 +1,5 @@
+const to = `parallelogram`;
+
 const html = 
 `<div className="curved-arrow"></div>
 `;
@@ -26,4 +28,4 @@ const style =
 }
 `;
 
-export { html, style };
+export { html, style , to };

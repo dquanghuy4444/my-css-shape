@@ -1,3 +1,5 @@
+const to = `heart`;
+
 const html = 
 `<div className="heart"></div>
 `;
@@ -31,4 +33,4 @@ const style =
 
 `;
 
-export { html, style };
+export { html, style , to };

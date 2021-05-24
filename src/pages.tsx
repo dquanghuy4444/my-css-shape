@@ -1,21 +1,37 @@
-import BphoneIconComp , { html as htmlBphoneIcon, style as styleBphoneIcon }  from "./components/shapes/bphone-icon";
-import BeeComp , { html as htmlBee, style as styleBee }  from "./components/shapes/bee";
-import HippoComp , { html as htmlHippo, style as styleHippo }  from "./components/shapes/hippo";
-import TriangleComp , { html as htmlTriangle, style as styleTriangle }  from "./components/shapes/triangle";
-import ArrowComp , { html as htmlArrow, style as styleArrow }  from "./components/shapes/arrow";
-import TrapezoidComp , { html as htmlTrapezoid, style as styleTrapezoid }  from "./components/shapes/trapezoid";
-import ParallelogramComp , { html as htmlParallelogram, style as styleParallelogram } from "./components/shapes/parallelogram";
-import HeartComp , { html as htmlHeart, style as styleHeart } from "./components/shapes/heart";
-import CanvasComp , { html as htmlCanvas, style as styleCanvas } from "./components/shapes/canvas";
-import PaperWithTapedEdgesComp , { html as htmlPaperWithTapedEdges, style as stylePaperWithTapedEdges } from "./components/shapes/paper-with-taped-edges";
+import * as bphoneIcon  from "./components/shapes/bphone-icon";
+import * as bee  from "./components/shapes/bee";
+import * as hippo  from "./components/shapes/hippo";
+import * as triangle  from "./components/shapes/triangle";
+import * as arrow  from "./components/shapes/arrow";
+import * as trapezoid  from "./components/shapes/trapezoid";
+import * as parallelogram from "./components/shapes/parallelogram";
+import * as heart from "./components/shapes/heart";
+import * as paperWithTapedEdges from "./components/shapes/paper-with-taped-edges";
 
-import LayoutCardResponsiveComp , { html as htmlLayoutCardResponsive, style as styleLayoutCardResponsives } from "./components/features/layout-card-responsive";
-import ZoomHoverComp , { html as htmlZoomHover, style as styleZoomHover } from "./components/features/zoom-hover";
-import TextResponsiveFollowImageSizeComp , { html as htmlTextResponsiveFollowImageSize, style as styleTextResponsiveFollowImageSize } from "./components/features/text-responsive-follow-image-size";
+import * as layoutCardResponsives from "./components/features/layout-card-responsive";
+import * as zoomHover from "./components/features/zoom-hover";
+import * as textResponsiveFollowImageSize from "./components/features/text-responsive-follow-image-size";
 
-import FlexMultiRowComp , { html as htmlFlexMultiRow, style as styleFlexMultiRow } from "./components/tips/flex-multi-row";
-import LineClampingComp , { html as htmlLineClamping, style as styleLineClamping } from "./components/tips/line-clamping";
-import TextOverflowComp , { html as htmlTextOverflow, style as styleTextOverflow } from "./components/tips/text-overflow";
+import * as flexMultiRow from "./components/tips/flex-multi-row";
+import * as lineClamping from "./components/tips/line-clamping";
+import * as textOverflow from "./components/tips/text-overflow";
+
+
+const shapeItems:any = [
+    bphoneIcon , bee , hippo , triangle , arrow , trapezoid , parallelogram , heart , paperWithTapedEdges
+]
+
+const featureItems:any = [
+    layoutCardResponsives,
+    zoomHover,
+    textResponsiveFollowImageSize,
+];
+
+const tipItems:any = [
+    flexMultiRow,
+    lineClamping,
+    textOverflow
+];
 
 enum GROUP_PAGE{
     SHAPE=1,
@@ -23,135 +39,33 @@ enum GROUP_PAGE{
     TIP=3,
 }
 
-const pages = [
-    {
-        to:"/bee",
-        text:"Bee",
-        comp: BeeComp,
-        html:htmlBee,
-        style:styleBee,
-        group:GROUP_PAGE.SHAPE,
-    },
-    {
-        to:"/bphone-icon",
-        text:"Bphone Icon",
-        comp: BphoneIconComp,
-        html:htmlBphoneIcon,
-        style:styleBphoneIcon,
-        group:GROUP_PAGE.SHAPE,
-    },
-    {
-        to:"/canvas",
-        text:"Canvas",
-        comp: <CanvasComp></CanvasComp>,
-        html:htmlCanvas,
-        style:styleCanvas,
-        group:GROUP_PAGE.SHAPE,
-    },
-    {
-        to:"/hippo",
-        text:"Hippo",
-        comp: HippoComp,
-        html:htmlHippo,
-        style:styleHippo,
-        group:GROUP_PAGE.SHAPE,
-    },
-    {
-        to:"/triangle",
-        text:"Triangle",
-        comp: TriangleComp,
-        html:htmlTriangle,
-        style:styleTriangle,
-        group:GROUP_PAGE.SHAPE,
-    },
-    {
-        to:"/arrow",
-        text:"Arrow",
-        comp: ArrowComp,
-        html:htmlArrow,
-        style:styleArrow,
-        group:GROUP_PAGE.SHAPE,
-    },
-    {
-        to:"/trapezoid",
-        text:"Trapezoid",
-        comp: TrapezoidComp,
-        html:htmlTrapezoid,
-        style:styleTrapezoid,
-        group:GROUP_PAGE.SHAPE,
-    },
-    {
-        to:"/parallelogram",
-        text:"Parallelogram",
-        comp: ParallelogramComp,
-        html:htmlParallelogram,
-        style:styleParallelogram,
-        group:GROUP_PAGE.SHAPE,
-    },
-    {
-        to:"/heart",
-        text:"Heart",
-        comp: HeartComp,
-        html:htmlHeart,
-        style:styleHeart,
-        group:GROUP_PAGE.SHAPE,
-    },
-    {
-        to:"/paper-with-taped-edges",
-        text:"Paper With Taped Edges",
-        comp: PaperWithTapedEdgesComp,
-        html:htmlPaperWithTapedEdges,
-        style:stylePaperWithTapedEdges,
-        group:GROUP_PAGE.SHAPE,
-    },
-    {
-        to:"/flex-multi-row",
-        text:"Flex Multi Row",
-        comp: FlexMultiRowComp,
-        html:htmlFlexMultiRow,
-        style:styleFlexMultiRow,
-        group:GROUP_PAGE.TIP,
-    },
-    {
-        to:"/line-clamping",
-        text:"Line Clamping",
-        comp: LineClampingComp,
-        html:htmlLineClamping,
-        style:styleLineClamping,
-        group:GROUP_PAGE.TIP,
-    },
-    {
-        to:"/text-overflow",
-        text:"Text Overflow",
-        comp: TextOverflowComp,
-        html:htmlTextOverflow,
-        style:styleTextOverflow,
-        group:GROUP_PAGE.TIP,
-    },
-    {
-        to:"/layout-card-responsive",
-        text:"Layout Card Responsive ",
-        comp: LayoutCardResponsiveComp,
-        html:htmlLayoutCardResponsive,
-        style:styleLayoutCardResponsives,
-        group:GROUP_PAGE.FEATURE,
-    },
-    {
-        to:"/zoom-hover",
-        text:"Zoom Hover ",
-        comp: ZoomHoverComp,
-        html:htmlZoomHover,
-        style:styleZoomHover,
-        group:GROUP_PAGE.FEATURE,
-    },
-    {
-        to:"/text-responsive-follow-image-size",
-        text:"Text Responsive Follow Image Size",
-        comp: TextResponsiveFollowImageSizeComp,
-        html:htmlTextResponsiveFollowImageSize,
-        style:styleTextResponsiveFollowImageSize,
-        group:GROUP_PAGE.FEATURE,
-    },
-]
+const pages:any[] = [];
+
+const toTitleCase = (phrase:any) => {
+    return phrase
+      .toLowerCase()
+      .split(' ')
+      .map((word:any) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  };
+
+const pushItemToPages = (groupPage:GROUP_PAGE , code:any )=>{
+    const name = toTitleCase(code.to.toLowerCase().replace("-" , " "));
+    const item = {
+        to:code.to,
+        text:name,
+        comp: code.comp,
+        html:code.html,
+        style:code.style,
+        group:groupPage,
+    }
+
+    pages.push(item);
+}
+
+featureItems.forEach((item:any)=> pushItemToPages(GROUP_PAGE.FEATURE , item));
+tipItems.forEach((item:any)=> pushItemToPages(GROUP_PAGE.TIP , item));
+shapeItems.forEach((item:any)=> pushItemToPages(GROUP_PAGE.SHAPE , item));
+
 
 export { pages , GROUP_PAGE };

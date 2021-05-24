@@ -1,3 +1,5 @@
+const to = `paper-with-taped-edges`;
+
 const html = 
 `<div className="paper pink">
   <div className="tape-section"></div>
@@ -137,4 +139,4 @@ const style =
 
 `;
 
-export { html, style };
+export { html, style , to };

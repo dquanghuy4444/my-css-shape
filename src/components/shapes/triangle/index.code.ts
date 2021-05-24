@@ -1,3 +1,5 @@
+const to = `triangle`
+
 const html = 
 `<div className="triangle-up"></div>
 <div className="triangle-right"></div>
@@ -63,4 +65,4 @@ const style =
 }
 `;
 
-export { html, style };
+export { html, style , to };

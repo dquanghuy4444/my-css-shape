@@ -1,3 +1,5 @@
+const to = `zoom-hover`;
+
 const html = 
 `
 <div className="image-frame">
@@ -29,4 +31,4 @@ img:hover {
 }
 `;
 
-export { html, style };
+export { html, style , to };
