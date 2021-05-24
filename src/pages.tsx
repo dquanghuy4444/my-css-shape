@@ -10,6 +10,7 @@ import * as paperWithTapedEdges from "./components/shapes/paper-with-taped-edges
 
 import * as layoutCardResponsives from "./components/features/layout-card-responsive";
 import * as zoomHover from "./components/features/zoom-hover";
+import * as scrollSnap from "./components/features/scroll-snap";
 import * as textResponsiveFollowImageSize from "./components/features/text-responsive-follow-image-size";
 
 import * as flexMultiRow from "./components/tips/flex-multi-row";
@@ -24,7 +25,7 @@ const shapeItems:any = [
 const featureItems:any = [
     layoutCardResponsives,
     zoomHover,
-    textResponsiveFollowImageSize,
+    textResponsiveFollowImageSize,scrollSnap
 ];
 
 const tipItems:any = [
