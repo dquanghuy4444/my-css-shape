@@ -6,11 +6,14 @@ import * as arrow  from "./components/shapes/arrow";
 import * as trapezoid  from "./components/shapes/trapezoid";
 import * as parallelogram from "./components/shapes/parallelogram";
 import * as heart from "./components/shapes/heart";
+import * as forkingCrazy from "./components/shapes/forking-crazy";
+import * as doorKnob from "./components/shapes/door-knob";
 import * as paperWithTapedEdges from "./components/shapes/paper-with-taped-edges";
 
 import * as layoutCardResponsives from "./components/features/layout-card-responsive";
 import * as zoomHover from "./components/features/zoom-hover";
 import * as scrollSnap from "./components/features/scroll-snap";
+import * as clipPath from "./components/features/clip-path";
 import * as textResponsiveFollowImageSize from "./components/features/text-responsive-follow-image-size";
 
 import * as flexMultiRow from "./components/tips/flex-multi-row";
@@ -19,13 +22,12 @@ import * as textOverflow from "./components/tips/text-overflow";
 
 
 const shapeItems:any = [
-    bphoneIcon , bee , hippo , triangle , arrow , trapezoid , parallelogram , heart , paperWithTapedEdges
+    bphoneIcon , bee , hippo , triangle , arrow , trapezoid , parallelogram , heart , paperWithTapedEdges , forkingCrazy,
+    doorKnob
 ]
 
 const featureItems:any = [
-    layoutCardResponsives,
-    zoomHover,
-    textResponsiveFollowImageSize,scrollSnap
+    layoutCardResponsives , zoomHover , textResponsiveFollowImageSize , scrollSnap , clipPath
 ];
 
 const tipItems:any = [
@@ -51,7 +53,7 @@ const toTitleCase = (phrase:any) => {
   };
 
 const pushItemToPages = (groupPage:GROUP_PAGE , code:any )=>{
-    const name = toTitleCase(code.to.toLowerCase().replace("-" , " "));
+    const name = toTitleCase(code.to.replaceAll("-" , " "));
     const item = {
         to:code.to,
         text:name,

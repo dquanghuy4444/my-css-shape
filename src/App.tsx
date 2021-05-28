@@ -23,10 +23,12 @@ function App() {
   const isMobileDevice:boolean = isMobile();
 
   const [listPagesIsDisplayed , setListPagesIsDisplayed] = useState<boolean>(isMobileDevice ? false : true);
+  const [activeGroupID , setActiveGroupID] = useState<number>(1);
 
 
   const sample = [
     {
+      id:1,
       text: 'Features',
       to:"/features",
       pages:pagesTemp.filter(item => item.group === GROUP_PAGE.FEATURE).sort(function(a,b){
@@ -35,6 +37,7 @@ function App() {
       value:GROUP_PAGE.FEATURE
     },
     {
+      id:2,
       text: 'Shapes',
       to:"/shapes",
       pages:pagesTemp.filter(item => item.group === GROUP_PAGE.SHAPE).sort(function(a,b){
@@ -43,6 +46,7 @@ function App() {
       value:GROUP_PAGE.SHAPE
     },
     {
+      id:3,
       text: 'Tips',
       to:"/tips",
       pages:pagesTemp.filter(item => item.group === GROUP_PAGE.TIP).sort(function(a,b){
@@ -77,8 +81,10 @@ function App() {
           {
             sample.map(item => (
               <>
-                <div className="group">{ item.text }</div>
-                <ul>
+                <div className="group cursor-pointer" onClick={ () => setActiveGroupID((prev:number) => prev === item.id ? 0 : item.id) }>
+                { item.text }
+                </div>
+                <ul className={ "sub-menu " + (activeGroupID === item.id ? "active" : "") }>
                   {
                     item.pages.map(page =>(
                       <Link to={ item.to + page.to }>

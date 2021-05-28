@@ -34,6 +34,10 @@ span{
   opacity: 0 !important;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 
 .react-codemirror2{
   height: 100%;
@@ -98,6 +102,28 @@ span{
       font-size:20px;
       font-weight: bolder;
       color:#df6262;
+
+      &:not(:first-child){
+        margin-top: 16px;
+      }
+    }
+
+    .sub-menu{
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1);
+      -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1);
+      -moz-transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1);
+      -ms-transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1);
+      -o-transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1);
+
+      &.active
+      {
+        opacity: 1;
+        height: auto;
+        
+      }
     }
     
     >.btn-close{
@@ -168,13 +194,17 @@ span{
       // display: flex;
       // align-items: center;
       // justify-content:center;
+
       display: grid;
       place-items: center;
+
       overflow: auto;
+      position: relative;
 
       .shape-container{
         display: flex;
         gap:20px;
+
 
         &.column{
           flex-direction:column;
