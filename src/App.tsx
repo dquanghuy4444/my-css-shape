@@ -87,7 +87,7 @@ function App() {
                 <ul className={ "sub-menu " + (activeGroupID === item.id ? "active" : "") }>
                   {
                     item.pages.map(page =>(
-                      <Link to={ item.to + page.to }>
+                      <Link to={ item.to + "/" + page.to }>
                         <li>
                           <span>{ page.text }</span>      
                         </li>
@@ -106,7 +106,7 @@ function App() {
           <Switch>
               {
                 pages.map(page =>(
-                  <Route path={ sample.find(item => item.value === page.group)?.to + page.to } exact>
+                  <Route path={ sample.find(item => item.value === page.group)?.to + "/" + page.to } exact>
                     {
                       page.comp
                     }
@@ -120,7 +120,7 @@ function App() {
             <div className="html">
               {
                 pages.map(page =>(
-                  <Route path={ sample.find(item => item.value === page.group)?.to + page.to } exact>
+                  <Route path={ sample.find(item => item.value === page.group)?.to + "/" + page.to } exact>
                     <CodeMirror
                       autoScroll={ true }
                       autoCursor={ true }
@@ -140,7 +140,7 @@ function App() {
             <div className="style">
               {
                 pages.map(page =>(
-                  <Route path={ sample.find(item => item.value === page.group)?.to + page.to } exact>
+                  <Route path={ sample.find(item => item.value === page.group)?.to + "/" + page.to } exact>
                     <CodeMirror
                       autoScroll={ true }
                       autoCursor={ true }

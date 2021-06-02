@@ -1,0 +1,134 @@
+const to = `skewed-border-card`;
+
+const html = 
+`
+<div className="skewed-border-card__container">
+  <div className="skewed-border-card">
+      <div className="content">
+          <h2>01</h2>
+          <h3>Services</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat vel nemo eligendi vero nobis consequatur distinctio suscipit quo eveniet totam aliquid necessitatibus ipsum quisquam, commodi dolor esse debitis, cupiditate beatae possimus. Ipsa maxime dolorem atque deleniti ratione at est reiciendis corrupti, nulla nam et quibusdam assumenda quidem expedita sunt accusamus.</p>
+          <a href="">Read more</a>
+      </div>
+  </div>
+</div>
+`;
+
+const style = 
+`
+.skewed-border-card__container{
+  position: relative;
+  z-index: 999;
+
+  .skewed-border-card{
+    position: relative;
+    height:300px;
+    background: #060c21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    width: 400px;
+  
+    &::before{
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -6px;
+      right: -2px;
+      bottom: -2px;
+      background-color: red;
+      z-index: -1;
+      transform: skew(2deg , 2deg);
+      -webkit-transform: skew(2deg , 2deg);
+      -moz-transform: skew(2deg , 2deg);
+      -ms-transform: skew(2deg , 2deg);
+      -o-transform: skew(2deg , 2deg);
+    }
+  
+    &:hover {
+  
+      .content{
+  
+        h2{
+          top: -140px;
+        }
+  
+        a{
+          transform: translateY(-0px);
+          -webkit-transform: translateY(-0px);
+          -moz-transform: translateY(-0px);
+          -ms-transform: translateY(-0px);
+          -o-transform: translateY(-0px);
+          opacity: 1;
+          visibility: visible;
+  }
+      }
+    }
+  
+    .content{
+      position: relative;
+      padding: 20px;
+
+      h2{
+        position: absolute;
+        top: -60px;
+        right: 20px;
+        margin: 0;
+        padding:0;
+        font-size: 10rem;
+        color:rgba(255,255,255 , 0.5);
+        transition:.5s    ;
+        -webkit-transition:.5s    ;
+        -moz-transition:.5s    ;
+        -ms-transition:.5s    ;
+        -o-transition:.5s    ;
+      }
+  
+      h3{
+        margin: 0 0 10px;
+        padding: 0;
+        font-size: 24px;
+        font-weight:500;
+        color: #fff;
+      }
+  
+      p{
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        font-size:16px;
+      }
+  
+      a{
+        position: relative;
+        margin: 4px 0 0 0;
+        padding: 10px 20px;
+        text-decoration: none;
+        border: 1px solid #fff;
+        display: inline-block;
+        color: #fff;
+        transition:.5s    ;
+        -webkit-transition:.5s    ;
+        -moz-transition:.5s    ;
+        -ms-transition:.5s    ;
+        -o-transition:.5s    ;
+        transform: translateY(-40px);
+        -webkit-transform: translateY(-40px);
+        -moz-transform: translateY(-40px);
+        -ms-transform: translateY(-40px);
+        -o-transform: translateY(-40px);
+        opacity: 0;
+        visibility: hidden;
+  
+        &:hover{
+          color: #000;
+          background-color: #fff;
+        }
+      }   
+    }
+  }
+}
+`;
+
+export { html, style , to };

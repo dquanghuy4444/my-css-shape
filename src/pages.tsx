@@ -8,12 +8,20 @@ import * as parallelogram from "./components/shapes/parallelogram";
 import * as heart from "./components/shapes/heart";
 import * as forkingCrazy from "./components/shapes/forking-crazy";
 import * as doorKnob from "./components/shapes/door-knob";
+import * as ukelele from "./components/shapes/ukelele";
 import * as paperWithTapedEdges from "./components/shapes/paper-with-taped-edges";
 
 import * as layoutCardResponsives from "./components/features/layout-card-responsive";
 import * as zoomHover from "./components/features/zoom-hover";
 import * as scrollSnap from "./components/features/scroll-snap";
 import * as clipPath from "./components/features/clip-path";
+import * as shapeOutside from "./components/features/shape-outside";
+import * as filterImages from "./components/features/filter-images";
+import * as skeletonLoader from "./components/features/skeleton-loader";
+import * as shadowImages from "./components/features/shadow-images";
+import * as cardHover from "./components/features/card-hover";
+import * as markImage from "./components/features/mark-image";
+import * as skewedBorderCard from "./components/features/skewed-border-card";
 import * as textResponsiveFollowImageSize from "./components/features/text-responsive-follow-image-size";
 
 import * as flexMultiRow from "./components/tips/flex-multi-row";
@@ -23,11 +31,12 @@ import * as textOverflow from "./components/tips/text-overflow";
 
 const shapeItems:any = [
     bphoneIcon , bee , hippo , triangle , arrow , trapezoid , parallelogram , heart , paperWithTapedEdges , forkingCrazy,
-    doorKnob
+    doorKnob , ukelele , 
 ]
 
 const featureItems:any = [
-    layoutCardResponsives , zoomHover , textResponsiveFollowImageSize , scrollSnap , clipPath
+    layoutCardResponsives , zoomHover , textResponsiveFollowImageSize , scrollSnap , clipPath, trapezoid, skeletonLoader, 
+    shapeOutside , filterImages , shadowImages , cardHover , markImage , skewedBorderCard
 ];
 
 const tipItems:any = [

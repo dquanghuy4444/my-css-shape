@@ -1,0 +1,104 @@
+const to = `ukelele`;
+
+const html = 
+`<div className="ukelele-1"></div>
+<div className="ukelele-2"></div>
+<div className="ukelele-3"></div>
+`;
+
+const style = 
+`.ukelele-1{
+
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+  }
+
+  &:before{
+    background:#998235;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  &:after{
+    background:#1a4341;
+    width: 40px;
+    height: 40px;
+    left: calc(50% + 80px);
+    top: calc(50% + 40px);
+    box-shadow: 0 0 0 5px #837e76 , 0 0 0 30px #998235;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+}
+
+.ukelele-2{
+
+
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+  }
+  
+  &:before{
+    background:#837e76;
+    width: 10px;
+    height: 60px;
+    top: calc(50% + 30px);
+    left: calc(50% + 20px);
+  }
+  
+  &:after{
+    background:#837e76;
+    width: 100px;
+    height: 10px;
+    top: calc(50% + 55px);
+    left: calc(50% + 150px);
+  }
+}
+
+.ukelele-3{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background:#998235;
+  top: calc(50% + 45px);
+  left: calc(50% + 250px);
+  border-radius: 20%;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  -o-border-radius: 20%;
+
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    background:#1a4341;
+    width: 15px;
+    height: 3px;
+  }
+   
+  &:before{
+    top: 5px;
+    left: 7px;
+  }
+    
+  &:after{
+    top: 20px;
+    left: 7px;
+  }
+}
+`;
+
+export { html, style , to };
