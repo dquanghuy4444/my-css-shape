@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import {UnControlled as CodeMirror} from 'react-codemirror2'
 import { pages as pagesTemp , GROUP_PAGE } from "./pages";
-import isMobile from './is-mobile';
+import { isMobile } from './ultis';
 import { useState } from 'react';
 
 require('codemirror/lib/codemirror.css');

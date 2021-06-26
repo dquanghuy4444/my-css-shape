@@ -21,7 +21,9 @@ import * as skeletonLoader from "./components/features/skeleton-loader";
 import * as shadowImages from "./components/features/shadow-images";
 import * as cardHover from "./components/features/card-hover";
 import * as markImage from "./components/features/mark-image";
+import * as pricingCard from "./components/features/pricing-card";
 import * as skewedBorderCard from "./components/features/skewed-border-card";
+import * as commentSection from "./components/features/comment-section";
 import * as textResponsiveFollowImageSize from "./components/features/text-responsive-follow-image-size";
 
 import * as flexMultiRow from "./components/tips/flex-multi-row";
@@ -36,7 +38,7 @@ const shapeItems:any = [
 
 const featureItems:any = [
     layoutCardResponsives , zoomHover , textResponsiveFollowImageSize , scrollSnap , clipPath, trapezoid, skeletonLoader, 
-    shapeOutside , filterImages , shadowImages , cardHover , markImage , skewedBorderCard
+    shapeOutside , filterImages , shadowImages , cardHover , markImage , skewedBorderCard , pricingCard , commentSection
 ];
 
 const tipItems:any = [

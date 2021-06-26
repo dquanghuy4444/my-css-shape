@@ -12,4 +12,8 @@ function isMobile(){
     }
 } 
 
-export default isMobile;
+function getUrlPublicImage(folder: string, file: string){
+     return `${process.env.PUBLIC_URL}/assets/images/${folder}/${file}`
+} 
+
+export {isMobile , getUrlPublicImage};
