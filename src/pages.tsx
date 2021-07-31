@@ -1,9 +1,11 @@
-import * as bphoneIcon  from "./components/shapes/bphone-icon";
-import * as bee  from "./components/shapes/bee";
-import * as hippo  from "./components/shapes/hippo";
-import * as triangle  from "./components/shapes/triangle";
-import * as arrow  from "./components/shapes/arrow";
-import * as trapezoid  from "./components/shapes/trapezoid";
+import * as bphoneIcon from "./components/shapes/bphone-icon";
+import * as bee from "./components/shapes/bee";
+import * as loveLetter from "./components/shapes/love-letter";
+import * as diamond from "./components/shapes/diamond";
+import * as hippo from "./components/shapes/hippo";
+import * as triangle from "./components/shapes/triangle";
+import * as arrow from "./components/shapes/arrow";
+import * as trapezoid from "./components/shapes/trapezoid";
 import * as parallelogram from "./components/shapes/parallelogram";
 import * as heart from "./components/shapes/heart";
 import * as forkingCrazy from "./components/shapes/forking-crazy";
@@ -31,55 +33,55 @@ import * as lineClamping from "./components/tips/line-clamping";
 import * as textOverflow from "./components/tips/text-overflow";
 
 
-const shapeItems:any = [
-    bphoneIcon , bee , hippo , triangle , arrow , trapezoid , parallelogram , heart , paperWithTapedEdges , forkingCrazy,
-    doorKnob , ukelele , 
+const shapeItems: any = [
+    bphoneIcon, bee, hippo, triangle, arrow, trapezoid, parallelogram, heart, paperWithTapedEdges, forkingCrazy,
+    doorKnob, ukelele, diamond, loveLetter
 ]
 
-const featureItems:any = [
-    layoutCardResponsives , zoomHover , textResponsiveFollowImageSize , scrollSnap , clipPath, trapezoid, skeletonLoader, 
-    shapeOutside , filterImages , shadowImages , cardHover , markImage , skewedBorderCard , pricingCard , commentSection
+const featureItems: any = [
+    layoutCardResponsives, zoomHover, textResponsiveFollowImageSize, scrollSnap, clipPath, trapezoid, skeletonLoader,
+    shapeOutside, filterImages, shadowImages, cardHover, markImage, skewedBorderCard, pricingCard, commentSection
 ];
 
-const tipItems:any = [
+const tipItems: any = [
     flexMultiRow,
     lineClamping,
     textOverflow
 ];
 
-enum GROUP_PAGE{
-    SHAPE=1,
-    FEATURE=2,
-    TIP=3,
+enum GROUP_PAGE {
+    SHAPE = 1,
+    FEATURE = 2,
+    TIP = 3,
 }
 
-const pages:any[] = [];
+const pages: any[] = [];
 
-const toTitleCase = (phrase:any) => {
+const toTitleCase = (phrase: any) => {
     return phrase
-      .toLowerCase()
-      .split(' ')
-      .map((word:any) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-  };
+        .toLowerCase()
+        .split(' ')
+        .map((word: any) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+};
 
-const pushItemToPages = (groupPage:GROUP_PAGE , code:any )=>{
-    const name = toTitleCase(code.to.replaceAll("-" , " "));
+const pushItemToPages = (groupPage: GROUP_PAGE, code: any) => {
+    const name = toTitleCase(code.to.replaceAll("-", " "));
     const item = {
-        to:code.to,
-        text:name,
+        to: code.to,
+        text: name,
         comp: code.comp,
-        html:code.html,
-        style:code.style,
-        group:groupPage,
+        html: code.html,
+        style: code.style,
+        group: groupPage,
     }
 
     pages.push(item);
 }
 
-featureItems.forEach((item:any)=> pushItemToPages(GROUP_PAGE.FEATURE , item));
-tipItems.forEach((item:any)=> pushItemToPages(GROUP_PAGE.TIP , item));
-shapeItems.forEach((item:any)=> pushItemToPages(GROUP_PAGE.SHAPE , item));
+featureItems.forEach((item: any) => pushItemToPages(GROUP_PAGE.FEATURE, item));
+tipItems.forEach((item: any) => pushItemToPages(GROUP_PAGE.TIP, item));
+shapeItems.forEach((item: any) => pushItemToPages(GROUP_PAGE.SHAPE, item));
 
 
-export { pages , GROUP_PAGE };
+export { pages, GROUP_PAGE };
