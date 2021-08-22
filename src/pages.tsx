@@ -11,6 +11,9 @@ import * as heart from "./components/shapes/heart";
 import * as forkingCrazy from "./components/shapes/forking-crazy";
 import * as doorKnob from "./components/shapes/door-knob";
 import * as ukelele from "./components/shapes/ukelele";
+import * as moon from "./components/shapes/moon";
+import * as carrot from "./components/shapes/carrot";
+import * as instagramIcon from "./components/shapes/instagram-icon";
 import * as paperWithTapedEdges from "./components/shapes/paper-with-taped-edges";
 
 import * as layoutCardResponsives from "./components/features/layout-card-responsive";
@@ -35,7 +38,7 @@ import * as textOverflow from "./components/tips/text-overflow";
 
 const shapeItems: any = [
     bphoneIcon, bee, hippo, triangle, arrow, trapezoid, parallelogram, heart, paperWithTapedEdges, forkingCrazy,
-    doorKnob, ukelele, diamond, loveLetter
+    doorKnob, ukelele, diamond, loveLetter , instagramIcon , moon , carrot
 ]
 
 const featureItems: any = [
